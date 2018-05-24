@@ -6,7 +6,7 @@ from Crypto.Cipher import ARC4
 import subprocess
 
 def checksum(data):
-    return hashlib.sha1(data).hexdigest()
+    return hashlib.sha1(data).digest()
 
 def get_encoder(password):
     return ARC4.new(password)

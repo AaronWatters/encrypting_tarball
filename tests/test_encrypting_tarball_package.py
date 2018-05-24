@@ -35,9 +35,9 @@ class FakeFiles(encrypting_tarball.Encryption):
         del self.get_path_to_content()[path]
 
 example_password = "password"
-example_password_signature = '833385a8efa4bf877107744e803b59d85f8ef228'
+example_password_signature = b'\x833\x85\xa8\xef\xa4\xbf\x87q\x07tN\x80;Y\xd8_\x8e\xf2('
 fake_tar_content = b"fake tar content "
-fake_tar_signature = '58d0438431b2f952fd94122a01d08c9e5cf7f71b'
+fake_tar_signature = b'X\xd0C\x841\xb2\xf9R\xfd\x94\x12*\x01\xd0\x8c\x9e\\\xf7\xf7\x1b'
 fake_crypt_content = b'"\x02\x15\x84H$\x19\xab&\xd9\x00\x9d\xbaLMEQ'
 
 class TestEncryption0(unittest.TestCase):
