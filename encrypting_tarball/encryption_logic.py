@@ -46,6 +46,7 @@ class Encryption:
         self.store_content(self.tar_path, tar_content)
 
     def create_tarfile(self):
+        assert self.exists(self.source_path)
         if self.exists(self.tar_path):
             self.delete_file(self.tar_path)
         create_tar_command = """
