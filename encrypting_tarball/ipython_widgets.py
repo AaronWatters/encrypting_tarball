@@ -16,7 +16,7 @@ def decrypt_widget(parent_path, folder_name):
             decryptor.decrypt()
             print("decryption complete.")
     decrypt_button.on_click(do_decrypt)
-    assembly = widgets.VBox(children=[decrypt_button, key_text_area])
+    assembly = widgets.VBox(children=[decrypt_button, key_text_area, out])
     display(assembly)
     with out:
         print "Please provide password and press the decrypt button to decrypt the data."

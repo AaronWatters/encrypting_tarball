@@ -17,7 +17,7 @@ def encrypt_script(parent_path, folder_name):
         password = sys.argv[1]
         delete = ("delete" in sys.argv[2:])
         encryptor = Encryption(parent_path, folder_name, password)
-        print ("Now decrypting in " + repr(parent_path) + " folder " + repr(folder_name))
+        print ("Now encrypting in " + repr(parent_path) + " folder " + repr(folder_name))
         if delete:
             print("... and deleting the source folder afterwards.")
         encryptor.encrypt(delete_source=delete)
