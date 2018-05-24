@@ -2,7 +2,7 @@ from setuptools import setup
 
 url = ""
 version = "0.1.0"
-readme = open('README.rst').read()
+readme = open('README.md').read()
 
 setup(
     name="encrypting_tarball",
