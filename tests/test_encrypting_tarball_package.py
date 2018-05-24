@@ -71,7 +71,7 @@ class TestEncryption0(unittest.TestCase):
     def test_check_bad_sig(self):
         f = FakeFiles("/a/b", "c", example_password)
         f.store_content(f.tar_path, fake_tar_content)
-        f.store_content(f.signature_path, fake_tar_signature[1:]+"5")
+        f.store_content(f.signature_path, fake_tar_signature[1:]+b"5")
         with self.assertRaises(ValueError):
             f.check_tarfile_signature()
 
